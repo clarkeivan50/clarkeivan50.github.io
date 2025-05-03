@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
+
+h1 {
+  display: flex;
+  justify-content: center;
+  font-family: 'Schoolbell';
+  font-size: 3rem;
+}
+
+body {
+  background-image: url("Images/background.jpeg");
+  background-repeat: repeat;
+  background-color: lightpink;
+}
+
+.tasklist {
+justify-content: center;
+display: flex;
+gap: 2rem;
+flex-wrap: wrap;
+}
+
+
+.task {
+  display: flex;                
+  align-items: center;          
+  justify-content: space-between;
+  gap: 1rem;                    
+  border-width: 0.5rem;
+  border-style: solid;
+  border-color: #facbe3;
+  border-radius: 3rem;
+  background-color: #ffe4f7;
+  padding: 1.5rem;
+  text-align: left;             
+  font-family: 'Schoolbell';
+  font-size: 2rem;
+  width: 100%; 
+  max-width: 250px;             
+  position: relative;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+
+.task-text {
+  flex: 1;
+}
+
+.time {
+  font-size: 1rem;
+  font-family: 'Schoolbell';
+  padding: 0.1rem;
+  position: relative;
+  font-weight: bold;
+}
