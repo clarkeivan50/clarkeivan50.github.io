@@ -40,6 +40,11 @@ flex-wrap: wrap;
   position: relative;
   box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
   font-weight: bold;
+  transition: transform 0.2s ease-in-out;
+}
+
+.task:hover {
+  transform: scale(1.05);
 }
 
 .task-text {
@@ -52,4 +57,103 @@ flex-wrap: wrap;
   padding: 0.1rem;
   position: relative;
   font-weight: bold;
+}
+
+
+.album-title {
+  text-align: center;
+  font-family: 'Schoolbell', cursive;
+  font-size: 2.5rem;
+  color: #ff69b4;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px #fff0f5;
+}
+
+.photo-album {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.photo-frame {
+  background-color: #fff0f5;
+  border: 0.4rem dashed #ffb6c1;
+  border-radius: 2rem;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 5px 5px #facbe3;
+  max-width: 200px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.photo-frame:hover {
+  transform: scale(1.05);
+}
+
+.album-photo {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(255, 182, 193, 0.5);
+}
+
+
+.carousel-title {
+  text-align: center;
+  font-family: 'Schoolbell', cursive;
+  font-size: 2.5rem;
+  color: #ff69b4;
+  margin-top: 3rem;
+  text-shadow: 2px 2px #fff0f5;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 80vw;
+  margin: 2rem auto;
+  background-color: #fff0f5;
+  border: 0.4rem dotted #ffb6c1;
+  border-radius: 2rem;
+  box-shadow: 5px 5px #facbe3;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carousel-slide {
+  min-width: 30%;
+  text-align: center;
+  padding: 1rem;
+}
+
+.carousel-slide img {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4);
+}
+
+.carousel-buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel-btn {
+  background-color: #ffe4f7;
+  border: 2px solid #ffb6c1;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.5rem;
+  color: #d63384;
+  cursor: pointer;
+  box-shadow: 2px 2px #facbe3;
 }

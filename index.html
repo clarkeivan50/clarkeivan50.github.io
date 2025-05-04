@@ -12,49 +12,88 @@
 <h1>Cookie Timer</h1>
 
 <div class="tasklist">
- <div class="task" data-interval-days="14"> 
+ <div class="task" data-id="coffee" data-interval-days="14"> 
 	 <div class="task-text">
 		 <p> Get coffee </p>
-		 <p class="time"> Calculating time...</p>
+		 <p class="time" data-clicked="0"> Calculating time...</p>
 	 </div>
 	 <img src="Images/coffee.png" width="100" height="100">
  </div> 
 
- <div class="task" data-interval-days="30">
+ <div class="task" data-id="cuisine" data-interval-days="30">
 	 <div class="task-text">
 		 <p> Try a new cuisine </p> 
-		 <p class="time"> Calculating time... </p>
+		 <p class="time" data-clicked="0"> Calculating time... </p>
 	 </div>
 	 <img src="Images/food.png" width="100" height="100">
  </div>
 
- <div class="task" data-interval-days="30">
+ <div class="task" data-id="jewellery" data-interval-days="30">
 	 <div class="task-text">
 		 <p> Buy new jewellery </p> 
-		 <p class="time"> Calculating time... </p>
+		 <p class="time" data-clicked="0"> Calculating time... </p>
 	 </div>
 	 <img src="Images/jewellery.png" width="100" height="100">
  </div>
 
- <div class="task" data-interval-days="30">
+ <div class="task" data-id="soft" data-interval-days="30">
 	 <div class="task-text">
 		 <p> Soft launch </p> 
-		 <p class="time"> Calculating time... </p>
+		 <p class="time" data-clicked="0"> Calculating time... </p>
      </div>
 	 <img src="Images/soft_launch.png" width="100" height="100">
  </div>
 
- <div class="task" data-interval-days="30">
+ <div class="task" data-id="tick" data-interval-days="30">
 	 <div class="task-text">
 		 <p> Tick off something from list </p> 
-		 <p class="time"> Calculating time... </p>
+		 <p class="time" data-clicked="0"> Calculating time... </p>
 	 </div>
 	 <img src="Images/tick.png" width="100" height="100">
  </div>
 
 <div>
 
-<p id="demo"></p>
+<h2 class="album-title">Photo Album</h2>
+
+<div class="carousel-container">
+  <div class="carousel">
+    <div class="carousel-slide">
+      <img src="Images/us1.jpg" alt="Cute photo 1">
+    </div>
+    <div class="carousel-slide">
+      <img src="Images/us2.jpg" alt="Cute photo 2">
+    </div>
+    <div class="carousel-slide">
+      <img src="Images/us3.jpg" alt="Cute photo 3">
+    </div>
+    <div class="carousel-slide">
+      <img src="Images/us4.jpg" alt="Cute photo 4">
+    </div>
+    <div class="carousel-slide">
+      <img src="Images/us5.jpg" alt="Cute photo 5">
+    </div>
+    <div class="carousel-slide">
+      <img src="Images/us6.jpg" alt="Cute photo 6">
+    </div>
+    <div class="carousel-slide">
+      <img src="Images/us7.jpg" alt="Cute photo 7">
+    </div>
+    <div class="carousel-slide">
+      <img src="Images/us8.jpg" alt="Cute photo 8">
+    </div>
+    <div class="carousel-slide">
+      <img src="Images/us9.jpg" alt="Cute photo 9">
+    </div>
+    <div class="carousel-slide">
+      <img src="Images/us10.jpg" alt="Cute photo 10">
+    </div>
+  </div>
+  <div class="carousel-buttons">
+    <button class="carousel-btn prev">⟨</button>
+    <button class="carousel-btn next">⟩</button>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>

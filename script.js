@@ -71,7 +71,9 @@ document.querySelectorAll('.task').forEach(card => {
       const m = Math.floor((display_text % (1000*60*60)) / (1000*60));
       const s = Math.floor((display_text % (1000*60)) / 1000);
 
-      if (display_text <= daysToMs(3)) {
+    if (display_text > 7) {
+          display.innerHTML = `<span> This week is not coffee week. Check again next week <3 </span>`;
+    } else if (display_text <= daysToMs(3)) {
           display.innerHTML = `<span style="font-size: 24px; color: red;">${d}d ${h}h ${m}m ${s}s</span>`;
           return;
       } else if (display_text <= daysToMs(5)) {
@@ -89,3 +91,31 @@ document.querySelectorAll('.task').forEach(card => {
 
   }, 1000);
 });
+
+const carousel = document.querySelector('.carousel');
+const slides = document.querySelectorAll('.carousel-slide');
+const dots = document.querySelectorAll('.dot');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+
+let index = 0;
+
+function updateCarousel() {
+  carousel.style.transform = `translateX(-${index * 30}%)`;
+}
+
+nextBtn.addEventListener('click', () => {
+  index = (index + 1) % slides.length;
+  updateCarousel();
+});
+
+prevBtn.addEventListener('click', () => {
+  index = (index - 1 + slides.length) % slides.length;
+  updateCarousel();
+});
+
+// autoplay
+setInterval(() => {
+  index = (index + 1) % slides.length;
+  updateCarousel();
+}, 4000);
