@@ -1,181 +1,304 @@
 @import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
 
-body {
-  background-image: url("Images/background.jpeg");
-  background-repeat: repeat;
-  background-color: lightpink;
-}
+@media only screen and (min-width: 600px) {
+  body {
+    background-image: url("Images/background.jpeg");
+    background-repeat: repeat;
+    background-color: lightpink;
+  }
 
-/* Headings */
-h1,
-.album-title,
-.carousel-title {
-  font-family: 'Schoolbell', cursive;
-  font-size: clamp(2rem, 5vw, 3rem);
-  text-align: center;
-  color: #ff69b4;
-  text-shadow: 2px 2px #fff0f5;
-  margin: 2rem 0 1rem;
-  padding: 0 1rem;
-}
+  /* Headings */
+  h1,
+  .album-title,
+  .carousel-title {
+    font-family: 'Schoolbell', cursive;
+    font-size: clamp(2rem, 5vw, 3rem);
+    text-align: center;
+    color: #ff69b4;
+    text-shadow: 2px 2px #fff0f5;
+    margin: 2rem 0 1rem;
+    padding: 0 1rem;
+  }
 
-/* Task List */
-.tasklist {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  padding: 1rem;
-}
-
-/* Individual Task */
-.task {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  border: 0.5rem solid #facbe3;
-  border-radius: 3rem;
-  background-color: #ffe4f7;
-  padding: 1.5rem;
-  text-align: left;
-  font-family: 'Schoolbell';
-  font-size: 2rem;
-  width: 100%;
-  max-width: 250px;
-  position: relative;
-  box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
-  font-weight: bold;
-  transition: transform 0.2s ease-in-out;
-}
-
-.task:hover {
-  transform: scale(1.05);
-}
-
-.task-text {
-  flex: 1;
-}
-
-.time {
-  font-size: 1rem;
-  font-family: 'Schoolbell';
-  padding: 0.1rem;
-  font-weight: bold;
-}
-
-/* Photo Album */
-.photo-album {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  padding: 1rem;
-}
-
-.photo-frame {
-  background-color: #fff0f5;
-  border: 0.4rem dashed #ffb6c1;
-  border-radius: 2rem;
-  padding: 1rem;
-  text-align: center;
-  box-shadow: 5px 5px #facbe3;
-  width: 100%;
-  max-width: 200px;
-  transition: transform 0.2s ease-in-out;
-}
-
-.photo-frame:hover {
-  transform: scale(1.05);
-}
-
-.album-photo {
-  width: 100%;
-  border-radius: 1rem;
-  box-shadow: 0 4px 8px rgba(255, 182, 193, 0.5);
-}
-
-/* Carousel */
-.carousel-container {
-  position: relative;
-  max-width: 80vw;
-  margin: 2rem auto;
-  background-color: #fff0f5;
-  border: 0.4rem dotted #ffb6c1;
-  border-radius: 2rem;
-  box-shadow: 5px 5px #facbe3;
-  overflow: hidden;
-}
-
-.carousel {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 100%;
-}
-
-/* Responsive Carousel Slides */
-.carousel-slide {
-  flex: 0 0 30%;
-  max-width: 30%;
-  text-align: center;
-  padding: 1rem;
-}
-
-.carousel-slide img {
-  width: 100%;
-  border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4);
-}
-
-/* Carousel Buttons */
-.carousel-buttons {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.carousel-btn {
-  background-color: #ffe4f7;
-  border: 2px solid #ffb6c1;
-  border-radius: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
-  font-size: 1.5rem;
-  color: #d63384;
-  cursor: pointer;
-  box-shadow: 2px 2px #facbe3;
-}
-
-@media (max-width: 768px) {
-  .task {
-    font-size: 1.5rem;
+  /* Task List */
+  .tasklist {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
     padding: 1rem;
   }
 
+  /* Individual Task */
+  .task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border: 0.5rem solid #facbe3;
+    border-radius: 3rem;
+    background-color: #ffe4f7;
+    padding: 1.5rem;
+    text-align: left;
+    font-family: 'Schoolbell';
+    font-size: 2rem;
+    width: 100%;
+    max-width: 250px;
+    position: relative;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .task:hover {
+    transform: scale(1.05);
+  }
+
+  .task-text {
+    flex: 1;
+  }
+
   .time {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    font-family: 'Schoolbell';
+    padding: 0.1rem;
+    font-weight: bold;
+  }
+
+  /* Photo Album */
+  .photo-album {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem;
   }
 
   .photo-frame {
-    padding: 0.5rem;
-    max-width: 90vw;
+    background-color: #fff0f5;
+    border: 0.4rem dashed #ffb6c1;
+    border-radius: 2rem;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 5px 5px #facbe3;
+    width: 100%;
+    max-width: 200px;
+    transition: transform 0.2s ease-in-out;
   }
 
+  .photo-frame:hover {
+    transform: scale(1.05);
+  }
+
+  .album-photo {
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(255, 182, 193, 0.5);
+  }
+
+  /* Carousel */
   .carousel-container {
-    max-width: 95vw;
+    position: relative;
+    max-width: 80vw;
+    margin: 2rem auto;
+    background-color: #fff0f5;
+    border: 0.4rem dotted #ffb6c1;
+    border-radius: 2rem;
+    box-shadow: 5px 5px #facbe3;
+    overflow: hidden;
   }
 
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+  }
+
+  /* Responsive Carousel Slides */
   .carousel-slide {
-    flex: 0 0 100%;
-    max-width: 100%;
-    min-width: 90%;
+    flex: 0 0 30%;
+    max-width: 30%;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .carousel-slide img {
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4);
+  }
+
+  /* Carousel Buttons */
+  .carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
 
   .carousel-btn {
-    width: 2rem;
-    height: 2rem;
-    font-size: 1.2rem;
+    background-color: #ffe4f7;
+    border: 2px solid #ffb6c1;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    color: #d63384;
+    cursor: pointer;
+    box-shadow: 2px 2px #facbe3;
+  }
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+  body {
+    background-image: url("Images/background.jpeg");
+    background-repeat: repeat;
+    background-color: lightpink;
+  }
+
+  /* Headings */
+  h1,
+  .album-title,
+  .carousel-title {
+    font-family: 'Schoolbell', cursive;
+    font-size: clamp(2rem, 5vw, 3rem);
+    text-align: center;
+    color: #ff69b4;
+    text-shadow: 2px 2px #fff0f5;
+    margin: 2rem 0 1rem;
+    padding: 0 1rem;
+  }
+
+  /* Task List */
+  .tasklist {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+
+  /* Individual Task */
+  .task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    border: 0.5rem solid #facbe3;
+    border-radius: 6rem;
+    background-color: #ffe4f7;
+    padding: 1.5rem;
+    text-align: left;
+    font-family: 'Schoolbell';
+    font-size: 4rem;
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 20px 20px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .task:hover {
+    transform: scale(1.05);
+  }
+
+  .task-text {
+    flex: 1;
+  }
+
+  .time {
+    font-size: 2rem;
+    font-family: 'Schoolbell';
+    padding: 0.2rem;
+    font-weight: bold;
+  }
+
+  /* Photo Album */
+  .photo-album {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .photo-frame {
+    background-color: #fff0f5;
+    border: 0.4rem dashed #ffb6c1;
+    border-radius: 2rem;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 5px 5px #facbe3;
+    width: 100%;
+    max-width: 500px;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .photo-frame:hover {
+    transform: scale(1.05);
+  }
+
+  .album-photo {
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(255, 182, 193, 0.5);
+  }
+
+  /* Carousel */
+  .carousel-container {
+    position: relative;
+    max-width: 80vw;
+    margin: 2rem auto;
+    background-color: #fff0f5;
+    border: 0.4rem dotted #ffb6c1;
+    border-radius: 2rem;
+    box-shadow: 5px 5px #facbe3;
+    overflow: hidden;
+  }
+
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+  }
+
+  /* Responsive Carousel Slides */
+  .carousel-slide {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .carousel-slide img {
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4);
+  }
+
+  /* Carousel Buttons */
+  .carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .carousel-btn {
+    background-color: #ffe4f7;
+    border: 2px solid #ffb6c1;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    color: #d63384;
+    cursor: pointer;
+    box-shadow: 2px 2px #facbe3;
   }
 }
