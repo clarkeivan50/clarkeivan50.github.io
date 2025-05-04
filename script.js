@@ -102,7 +102,7 @@ let index = 0;
 
 function updateCarousel() {
   const isPhone = window.innerWidth <= 600; // threshold for phones
-  const shiftPercent = isPhone ? 100 : 30;
+  const shiftPercent = isPhone ? 107 : 33;
 
   carousel.style.transform = `translateX(-${index * shiftPercent}%)`;
 }
