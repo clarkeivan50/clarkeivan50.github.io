@@ -157,3 +157,52 @@ flex-wrap: wrap;
   cursor: pointer;
   box-shadow: 2px 2px #facbe3;
 }
+
+
+/* Responsive Typography */
+h1,
+.album-title,
+.carousel-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+/* Responsive Photo Frame */
+.photo-frame {
+  max-width: 90vw;
+  width: 100%;
+}
+
+/* Responsive Carousel Slides */
+.carousel-slide {
+  flex: 0 0 30%;
+  max-width: 30%;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .task {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+
+  .time {
+    font-size: 0.9rem;
+  }
+
+  .carousel-container {
+    max-width: 95vw;
+  }
+
+  .carousel-slide {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .carousel-btn {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.2rem;
+  }
+}
