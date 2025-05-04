@@ -170,6 +170,7 @@ h1,
   .carousel-slide {
     flex: 0 0 100%;
     max-width: 100%;
+    min-width: 90%;
   }
 
   .carousel-btn {
