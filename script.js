@@ -72,7 +72,7 @@ document.querySelectorAll('.task').forEach(card => {
       const s = Math.floor((display_text % (1000*60)) / 1000);
 
     if (display_text > 7) {
-          display.innerHTML = `<span> This week is not coffee week. Check again next week <3 </span>`;
+          display.innerHTML = `<span> Next week is coffee week <3 </span>`;
     } else if (display_text <= daysToMs(3)) {
           display.innerHTML = `<span style="font-size: 24px; color: red;">${d}d ${h}h ${m}m ${s}s</span>`;
           return;
