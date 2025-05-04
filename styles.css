@@ -1,42 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
 
-h1 {
-  display: flex;
-  justify-content: center;
-  font-family: 'Schoolbell';
-  font-size: 3rem;
-}
-
 body {
   background-image: url("Images/background.jpeg");
   background-repeat: repeat;
   background-color: lightpink;
 }
 
-.tasklist {
-justify-content: center;
-display: flex;
-gap: 2rem;
-flex-wrap: wrap;
+/* Headings */
+h1,
+.album-title,
+.carousel-title {
+  font-family: 'Schoolbell', cursive;
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-align: center;
+  color: #ff69b4;
+  text-shadow: 2px 2px #fff0f5;
+  margin: 2rem 0 1rem;
+  padding: 0 1rem;
 }
 
+/* Task List */
+.tasklist {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
 
+/* Individual Task */
 .task {
-  display: flex;                
-  align-items: center;          
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  gap: 1rem;                    
-  border-width: 0.5rem;
-  border-style: solid;
-  border-color: #facbe3;
+  gap: 1rem;
+  border: 0.5rem solid #facbe3;
   border-radius: 3rem;
   background-color: #ffe4f7;
   padding: 1.5rem;
-  text-align: left;             
+  text-align: left;
   font-family: 'Schoolbell';
   font-size: 2rem;
-  width: 100%; 
-  max-width: 250px;             
+  width: 100%;
+  max-width: 250px;
   position: relative;
   box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
   font-weight: bold;
@@ -55,21 +61,10 @@ flex-wrap: wrap;
   font-size: 1rem;
   font-family: 'Schoolbell';
   padding: 0.1rem;
-  position: relative;
   font-weight: bold;
 }
 
-
-.album-title {
-  text-align: center;
-  font-family: 'Schoolbell', cursive;
-  font-size: 2.5rem;
-  color: #ff69b4;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-  text-shadow: 2px 2px #fff0f5;
-}
-
+/* Photo Album */
 .photo-album {
   display: flex;
   justify-content: center;
@@ -85,6 +80,7 @@ flex-wrap: wrap;
   padding: 1rem;
   text-align: center;
   box-shadow: 5px 5px #facbe3;
+  width: 100%;
   max-width: 200px;
   transition: transform 0.2s ease-in-out;
 }
@@ -99,16 +95,7 @@ flex-wrap: wrap;
   box-shadow: 0 4px 8px rgba(255, 182, 193, 0.5);
 }
 
-
-.carousel-title {
-  text-align: center;
-  font-family: 'Schoolbell', cursive;
-  font-size: 2.5rem;
-  color: #ff69b4;
-  margin-top: 3rem;
-  text-shadow: 2px 2px #fff0f5;
-}
-
+/* Carousel */
 .carousel-container {
   position: relative;
   max-width: 80vw;
@@ -126,8 +113,10 @@ flex-wrap: wrap;
   width: 100%;
 }
 
+/* Responsive Carousel Slides */
 .carousel-slide {
-  min-width: 30%;
+  flex: 0 0 30%;
+  max-width: 30%;
   text-align: center;
   padding: 1rem;
 }
@@ -138,6 +127,7 @@ flex-wrap: wrap;
   box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4);
 }
 
+/* Carousel Buttons */
 .carousel-buttons {
   position: absolute;
   top: 50%;
@@ -158,29 +148,6 @@ flex-wrap: wrap;
   box-shadow: 2px 2px #facbe3;
 }
 
-
-/* Responsive Typography */
-h1,
-.album-title,
-.carousel-title {
-  font-size: clamp(2rem, 5vw, 3rem);
-}
-
-/* Responsive Photo Frame */
-.photo-frame {
-  max-width: 90vw;
-  width: 100%;
-}
-
-/* Responsive Carousel Slides */
-.carousel-slide {
-  flex: 0 0 30%;
-  max-width: 30%;
-  text-align: center;
-  padding: 1rem;
-}
-
-/* Responsive Media Queries */
 @media (max-width: 768px) {
   .task {
     font-size: 1.5rem;
@@ -189,6 +156,11 @@ h1,
 
   .time {
     font-size: 0.9rem;
+  }
+
+  .photo-frame {
+    padding: 0.5rem;
+    max-width: 90vw;
   }
 
   .carousel-container {
