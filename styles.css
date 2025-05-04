@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) {
   body {
     background-image: url("Images/background.jpeg");
     background-repeat: repeat;
@@ -152,7 +152,7 @@
 
 
 
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 600px) {
 
   body {
     background-image: url("Images/background.jpeg");
@@ -187,9 +187,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 1rem;
     border: 0.5rem solid #facbe3;
-    border-radius: 6rem;
+    border-radius: 3rem;
     background-color: #ffe4f7;
     padding: 1.5rem;
     text-align: left;
@@ -212,41 +212,10 @@
   }
 
   .time {
-    font-size: 2rem;
+    font-size: 1rem;
     font-family: 'Schoolbell';
-    padding: 0.2rem;
+    padding: 0.1rem;
     font-weight: bold;
-  }
-
-  /* Photo Album */
-  .photo-album {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    padding: 1rem;
-  }
-
-  .photo-frame {
-    background-color: #fff0f5;
-    border: 0.4rem dashed #ffb6c1;
-    border-radius: 2rem;
-    padding: 1rem;
-    text-align: center;
-    box-shadow: 5px 5px #facbe3;
-    width: 100%;
-    max-width: 500px;
-    transition: transform 0.2s ease-in-out;
-  }
-
-  .photo-frame:hover {
-    transform: scale(1.05);
-  }
-
-  .album-photo {
-    width: 100%;
-    border-radius: 1rem;
-    box-shadow: 0 4px 8px rgba(255, 182, 193, 0.5);
   }
 
   /* Carousel */
