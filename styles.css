@@ -65,6 +65,37 @@
     font-weight: bold;
   }
 
+  /* Photo Album */
+  .photo-album {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .photo-frame {
+    background-color: #fff0f5;
+    border: 0.4rem dashed #ffb6c1;
+    border-radius: 2rem;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 5px 5px #facbe3;
+    width: 100%;
+    max-width: 200px;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .photo-frame:hover {
+    transform: scale(1.05);
+  }
+
+  .album-photo {
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(255, 182, 193, 0.5);
+  }
+
   /* Carousel */
   .carousel-container {
     position: relative;
@@ -134,75 +165,79 @@
   .album-title,
   .carousel-title {
     font-family: 'Schoolbell', cursive;
-    /* fluid between 1.8rem and 2.5rem, based on 5% of viewport width */
-    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    font-size: clamp(3rem, 5vw, 3rem);
     text-align: center;
     color: #ff69b4;
-    text-shadow: 1px 1px #fff0f5;
-    margin: 1.5rem 0 0.75rem;
-    padding: 0 0.5rem;
+    text-shadow: 2px 2px #fff0f5;
+    margin: 2rem 0 1rem;
+    padding: 0 1rem;
   }
 
   /* Task List */
   .tasklist {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding: 0.5rem;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    padding: 5rem;
   }
 
   /* Individual Task */
   .task {
-    display: flex;
+    text-align: center;
+    margin: 0 auto;
     align-items: center;
-    justify-content: space-between;
     gap: 0.5rem;
-    border: 0.3rem solid #facbe3;
-    border-radius: 2rem;
+    border: 0.5rem solid #facbe3;
+    border-radius: 3rem;
     background-color: #ffe4f7;
-    padding: 1rem;
-    text-align: left;
-    font-family: 'Schoolbell', cursive;
-    /* fluid between 1.2rem and 2rem */
-    font-size: clamp(1.2rem, 4vw, 2rem);
-    width: 90%;            /* nearly full width with side margin */
-    max-width: 360px;      /* cap so it never stretches too wide */
-    box-shadow: 5px 5px rgba(0, 0, 0, 0.15);
+    padding: 1.5rem;
+    font-family: 'Schoolbell';
+    font-size: 2.5rem;
+    width: 100%;
+    max-width: 500px;
+    min-width: 110%;
+    position: relative;
+    box-shadow: 20px 20px rgba(0, 0, 0, 0.2);
     font-weight: bold;
-    transition: transform 0.15s ease-in-out;
+    transition: transform 0.2s ease-in-out;
   }
 
   .task:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
+  }
+
+  .task img {
+    display: block;
+    margin: 0 auto;
   }
 
   .task-text {
-    flex: 1;
+    margin: 0 auto;
   }
 
   .time {
-    font-size: clamp(0.8rem, 2.5vw, 1rem);
-    font-family: 'Schoolbell', cursive;
+    font-size: 1.5rem;
+    font-family: 'Schoolbell';
     padding: 0.1rem;
     font-weight: bold;
   }
 
-  /* Carousel Container */
+  /* Carousel */
   .carousel-container {
     position: relative;
-    max-width: 95vw;
-    margin: 1.5rem auto;
+    max-width: 80vw;
+    margin: 2rem auto;
     background-color: #fff0f5;
-    border: 0.3rem dotted #ffb6c1;
-    border-radius: 1.5rem;
-    box-shadow: 3px 3px #facbe3;
+    border: 0.4rem dotted #ffb6c1;
+    border-radius: 2rem;
+    box-shadow: 5px 5px #facbe3;
     overflow: hidden;
   }
 
   .carousel {
     display: flex;
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.5s ease-in-out;
     width: 100%;
   }
 
@@ -211,13 +246,13 @@
     flex: 0 0 100%;
     max-width: 100%;
     text-align: center;
-    padding: 0.75rem;
+    padding: 1rem;
   }
 
   .carousel-slide img {
     width: 100%;
-    border-radius: 0.75rem;
-    box-shadow: 0 3px 8px rgba(255, 182, 193, 0.4);
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4);
   }
 
   /* Carousel Buttons */
@@ -227,22 +262,17 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    transform: translateY(-50%);
-    padding: 0 0.5rem;
   }
 
   .carousel-btn {
     background-color: #ffe4f7;
     border: 2px solid #ffb6c1;
     border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    font-size: 1.2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
     color: #d63384;
     cursor: pointer;
-    box-shadow: 1px 1px #facbe3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    box-shadow: 2px 2px #facbe3;
   }
 }
