@@ -101,7 +101,10 @@ const nextBtn = document.querySelector('.next');
 let index = 0;
 
 function updateCarousel() {
-  carousel.style.transform = `translateX(-${index * 30}%)`;
+  const isPhone = window.innerWidth <= 600; // threshold for phones
+  const shiftPercent = isPhone ? 100 : 30;
+
+  carousel.style.transform = `translateX(-${index * shiftPercent}%)`;
 }
 
 nextBtn.addEventListener('click', () => {
