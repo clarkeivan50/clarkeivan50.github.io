@@ -187,7 +187,6 @@
     text-align: center;
     margin: 0 auto;
     align-items: center;
-    gap: 0.5rem;
     border: 0.5rem solid #facbe3;
     border-radius: 3rem;
     background-color: #ffe4f7;
@@ -214,6 +213,11 @@
 
   .task-text {
     margin: 0 auto;
+  line-height: 1.2;  /* tighten line spacing */
+  }
+
+  .task-text p {
+    margin: 0.25rem 0;     /* Reduced vertical spacing */
   }
 
   .time {
