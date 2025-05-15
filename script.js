@@ -71,17 +71,17 @@ document.querySelectorAll('.task').forEach(card => {
       const m = Math.floor((display_text % (1000*60*60)) / (1000*60));
       const s = Math.floor((display_text % (1000*60)) / 1000);
 
-    if (display_text > daysToMs(7)) {
-          display.innerHTML = `<span> Next week is coffee week <3 </span>`;
-    } else if (display_text <= daysToMs(3)) {
-          display.innerHTML = `<span style="font-size: 24px; color: red;">${d}d ${h}h ${m}m ${s}s</span>`;
-          return;
-      } else if (display_text <= daysToMs(5)) {
-          display.innerHTML = `<span style="font-size: 20px; color: red;">${d}d ${h}h ${m}m ${s}s</span>`;
-          return;
-      } else {
-        display.textContent = `${d}d ${h}h ${m}m ${s}s`;
-      }
+      if (display_text > daysToMs(7)) {
+            display.innerHTML = `<span> Next week is coffee week <3 </span>`;
+      } else if (display_text <= daysToMs(3)) {
+            display.innerHTML = `<span style="font-size: 24px; color: red;">${d}d ${h}h ${m}m ${s}s</span>`;
+            return;
+        } else if (display_text <= daysToMs(5)) {
+            display.innerHTML = `<span style="font-size: 20px; color: red;">${d}d ${h}h ${m}m ${s}s</span>`;
+            return;
+        } else {
+          display.textContent = `${d}d ${h}h ${m}m ${s}s`;
+        }
     } else {
 
         display.textContent = `Done <3`;
